@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+input:checked~.dot {
+    transform: translateX(100%);
+  }
+
+  input:checked+.block {
+    background-color: green;
+  }
+  
+  .card:hover .footer {
+    background-color: #292562;
+  }
+
+  .card:hover .btn-1 {
+    color: white;
+  }
+
+  .card:hover .btn-2 {
+    background-color: white;
+    color: #292562;
+  }
+
+  .carousel-open:checked+.carousel-item {
+    position: static;
+    opacity: 100;
+  }
+
+  #carousel-1:checked~.control-1,
+  #carousel-2:checked~.control-2,
+  #carousel-3:checked~.control-3 {
+    display: block;
+  }
+
+  #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+  #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+  #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #2b6cb0;
+  }
+
+
+}
+
+
+table,
+    td,
+    td {
+      border: 0.5px solid rgb(197, 197, 197);
+      border-collapse: collapse;
+      margin-top: 57px;
+      table-layout: fixed;
+    }
+
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+th{
+  background-color:white;
+}
+    tr:nth-child(odd) {
+      background-color: #f5f5f5;
+    }
+
+   
+
+
+    
+  //AddEmployeeForm
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
